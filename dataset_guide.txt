@@ -1,0 +1,51 @@
+FROM SIMULATOR_2.0_PEC
+
+PEC only
+sim1 - training
+sim2 - training
+sim3 - training
+sim4 - testing
+
+PEC with air
+sim5 - training
+sim6 - training
+sim7 - training
+sim8 - testing
+
+air only
+sim9 - training
+sim10 - training
+sim11 - training
+sim12 - testing
+
+RUN FOR SIMULATOR_2.1
+
+water only
+sim13 - training
+sim14 - training
+sim15 - training
+sim16 - testing
+
+water and PEC
+sim17 - training
+sim18 - training
+sim19 - training
+sim20 - testing
+
+water and air
+sim21 - training
+sim22 - training
+sim23 - training
+sim24 - testing
+
+water and PEC and air
+sim25 - training
+sim26 - training
+sim27 - training
+sim28 - testing
+
+water and PEC and air (double the number to emphasise the importance)
+sim29 - training
+sim30 - training
+sim31 - training
+sim32 - testing

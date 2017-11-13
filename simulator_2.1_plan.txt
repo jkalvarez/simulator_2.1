@@ -1,0 +1,54 @@
+Functions:
+
+Generate_environments:
+Main sample generator. Controls generate_in_file to generate multiple environment to specs based on arguments.
+
+varargin - materials
+
+Generate_in_file:
+Generates randomized .in file for training/testing. Most complicated, needs to be hard rewritten with functions rather than script style. Needs pass arguments from generate_environment.
+
+Stuff to change in generate_environment:
+change antenna separation from 0.14 to 0.04 as per manufacturer spec in .rad file
+change source and receiver locations to suit
+    x_offset = 0.1 +- antenna_seperation/2
+    Tx 0.030 Rx 0.170
+    Tx 0.080 Rx 0.120
+change rebar permittivity value and also just don't use it lolz. Use PEC identifier instead
+
+
+Generate dataset:
+main processing file
+generates testing and training dataset by combining gprMax output and permittivity map image
+
+Generate permittivity map:
+generates permittivity map based on .in file passed as argument and stores it in
+./permittivity_map_images/ 
+default to logit scaling for permittivity scaling
+
+importfile:
+needed by generate_dataset to read .txt file formatted to spec
+
+mala_source/mala_source_modified:
+file used in gprMax to act as custom waveform
+
+
+
+
+File structure:
+./permittivity_map_images/
+contains the ground truth permittivity map images
+
+./in_files/
+contains the simulation in files ready to run on gprMax
+
+./gprMax_output/
+contains either raw _merged.out or .txt files from gprMax output with respect to ./in_files
+Note that raw files are ~3x larger than .txt files... easier to keep maintain .txt
+
+available materials:
+- concrete: box
+- pec: cylinder
+- air: box
+- water: box 
+
