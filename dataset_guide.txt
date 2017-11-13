@@ -20,6 +20,7 @@ sim12 - testing
 
 RUN FOR SIMULATOR_2.1
 
+Workstation
 water only
 sim13 - training
 sim14 - training
@@ -38,6 +39,7 @@ sim22 - training
 sim23 - training
 sim24 - testing
 
+USB
 water and PEC and air
 sim25 - training
 sim26 - training
