@@ -1,4 +1,6 @@
-FROM SIMULATOR_2.0_PEC
+FROM SIMULATOR_2.0_PEC (note specs for permittivity of concrete and antenna seperation are different so should redo but can test without for robustness of alg with different antennas and permittivity)
+
+air and pec with air datasets have been swapped from v2.0 to make more logical sense
 
 PEC only
 sim1 - training
@@ -20,7 +22,6 @@ sim12 - testing
 
 RUN FOR SIMULATOR_2.1
 
-Workstation
 water only
 sim13 - training
 sim14 - training
@@ -39,7 +40,6 @@ sim22 - training
 sim23 - training
 sim24 - testing
 
-USB
 water and PEC and air
 sim25 - training
 sim26 - training
